@@ -14,7 +14,7 @@ pipeline {
    steps {
        sh 'npm rebuild node-sass'
        sh 'ionic cordova platform rm android'
-       sh 'ionic cordova platform ad android'
+       sh 'ionic cordova platform add android'
        sh 'ionic cordova build --release android'
    }
   }
