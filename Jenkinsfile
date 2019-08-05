@@ -12,10 +12,10 @@ pipeline {
 
    stage('Android Build and export APK') {
    steps {
-      //sh 'npm rebuild node-sass'
-      sh 'ionic cordova platform rm android'
-       sh 'ionic cordova platform add android'
-      sh 'ionic cordova build --release android'
+       sh 'npm rebuild node-sass'
+       sh 'ionic cordova platform rm android'
+       sh 'ionic cordova platform ad android'
+       sh 'ionic cordova build --release android'
    }
   }
 // stage('iOS Build and export IPA') {
@@ -25,5 +25,5 @@ pipeline {
 //       sh 'xcodebuild -exportArchive  -archivePath platforms/ios/MyApp.xcarchive -exportPath  platforms/ios/archive -exportOptionsPlist platforms/ios/exportOptions.plist' 
 //    }      
 //    }
-//  }
+ }
 }
