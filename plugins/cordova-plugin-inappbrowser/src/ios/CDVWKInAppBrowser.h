@@ -1,0 +1,110 @@
+/*
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+ 
+ http://www.apache.org/licenses/LICENSE-2.0
+ 
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ */
+
+#import <Cordova/CDVPlugin.h>
+#import <Cordova/CDVInvokedUrlCommand.h>
+#import <Cordova/CDVScreenOrientationDelegate.h>
+#import "CDVWKInAppBrowserUIDelegate.h"
+#import "CDVInAppBrowserOptions.h"
+#import "CDVInAppBrowserNavigationController.h"
+
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import <CoreTelephony/CTCarrier.h>
+@class CDVWKInAppBrowserViewController;
+
+@interface CDVWKInAppBrowser : CDVPlugin {
+@private
+    NSString* _beforeload;
+    BOOL _waitForBeforeload;
+}
+
+@property (nonatomic, retain) CDVWKInAppBrowser* instance;
+@property (nonatomic, retain) CDVWKInAppBrowserViewController* inAppBrowserViewController;
+@property (nonatomic, copy) NSString* callbackId;
+@property (nonatomic, copy) NSRegularExpression *callbackIdPattern;
+@property (nonatomic, assign) NSString* cellularName;
+@property (nonatomic, weak) id <UIImagePickerControllerDelegate> imagePicker;
+@property (nonatomic, strong) NSString* lastLoaded;
+
+
++ (id) getInstance;
+- (void)open:(CDVInvokedUrlCommand*)command;
+- (void)close:(CDVInvokedUrlCommand*)command;
+- (void)injectScriptCode:(CDVInvokedUrlCommand*)command;
+- (void)show:(CDVInvokedUrlCommand*)command;
+- (void)hide:(CDVInvokedUrlCommand*)command;
+- (void)loadAfterBeforeload:(CDVInvokedUrlCommand*)command;
+
+@end
+
+@interface CDVWKInAppBrowserViewController : UIViewController <CDVScreenOrientationDelegate,WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler,UIImagePickerControllerDelegate,UINavigationControllerDelegate>{
+@private
+    NSString* _userAgent;
+    NSString* _prevUserAgent;
+    NSInteger _userAgentLockToken;
+    CDVInAppBrowserOptions *_browserOptions;
+}
+
+@property (nonatomic, strong) IBOutlet WKWebView* webView;
+@property (nonatomic, strong) IBOutlet UIView* tabView;
+@property (nonatomic, strong) IBOutlet UIView* statusBar;
+@property (nonatomic, strong) IBOutlet WKWebViewConfiguration* configuration;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem* closeButton;
+@property (nonatomic, strong) IBOutlet UILabel* addressLabel;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem* backButton;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem* forwardButton;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView* spinner;
+@property (nonatomic, strong) IBOutlet UIToolbar* toolbar;
+@property (nonatomic, strong) IBOutlet CDVWKInAppBrowserUIDelegate* webViewUIDelegate;
+@property (nonatomic, strong) IBOutlet UIButton* dealsButton;
+@property (nonatomic, strong) IBOutlet UIButton* giftButton;
+@property (nonatomic, strong) IBOutlet UIButton* settingsButton;
+@property (nonatomic, strong) IBOutlet UIButton* homeButton;
+@property (nonatomic, assign) BOOL homeSelected;
+@property (nonatomic, assign) BOOL dealsSelected;
+@property (nonatomic, assign) BOOL gidtSelected;
+@property (nonatomic, assign) BOOL settingsSelected;
+@property (nonatomic, strong) NSString* baseUrl;
+@property (nonatomic, strong) NSString* lastClicked;
+@property (nonatomic, assign) NSString* lastUrl;
+@property (nonatomic, assign) BOOL permissionsAsked;
+@property (nonatomic, assign) BOOL camaraPermissions;
+@property (nonatomic, assign) BOOL photoPermissions;
+@property (nonatomic, strong) NSString* lastLoaded;
+@property (nonatomic, assign) BOOL showPermissions;
+@property (nonatomic, strong) NSString * CPUserAgent;
+@property (nonatomic, strong)  UIProgressView* myProgressView;
+@property (nonatomic, assign) BOOL showProgressView;
+
+@property (nonatomic, weak) id <CDVScreenOrientationDelegate> orientationDelegate;
+@property (nonatomic, weak) CDVWKInAppBrowser* navigationDelegate;
+@property (nonatomic) NSURL* currentURL;
+@property (nonatomic, strong ) IBOutlet UIActionSheet *actionSheet;
+
+- (void)close;
+- (void)navigateTo:(NSURL*)url;
+- (void)showLocationBar:(BOOL)show;
+- (void)showToolBar:(BOOL)show : (NSString *) toolbarPosition;
+- (void)setCloseButtonTitle:(NSString*)title : (NSString*) colorString : (int) buttonIndex;
+
+- (id)initWithUserAgent:(NSString*)userAgent prevUserAgent:(NSString*)prevUserAgent browserOptions: (CDVInAppBrowserOptions*) browserOptions;
+- (void)popCamera;
+-(void) goToCamera;
+-(void) checkPhotoPermissions;
+@end

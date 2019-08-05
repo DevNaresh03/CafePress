@@ -1,0 +1,45 @@
+{
+  "_from": "cordova-plugin-apprate",
+  "_id": "cordova-plugin-apprate@1.4.0",
+  "_inBundle": false,
+  "_integrity": "sha512-4HflFYuxzctnxQHYL9L5og7GVtVDQuqFX4WGXBzslln8V9/ODCafBTTtLSt+EKoIOJvL1iD5dztYkfyDn7HpBg==",
+  "_location": "/cordova-plugin-apprate",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-apprate",
+    "name": "cordova-plugin-apprate",
+    "escapedName": "cordova-plugin-apprate",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-apprate/-/cordova-plugin-apprate-1.4.0.tgz",
+  "_shasum": "b4dd461c1fab83c2cad60777dd71cbc1ff101b14",
+  "_spec": "cordova-plugin-apprate",
+  "_where": "/Users/vidyadhar.nagu/Documents/PROJECTS/Cafepress_git/Cafepress",
+  "bugs": {
+    "url": "https://github.com/pushandplay/cordova-plugin-apprate/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {},
+  "deprecated": false,
+  "description": "A plugin to provide rate this app functionality into your cordova application",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cordovacli": "*"
+  },
+  "homepage": "https://github.com/pushandplay/cordova-plugin-apprate#readme",
+  "name": "cordova-plugin-apprate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushandplay/cordova-plugin-apprate.git"
+  },
+  "types": "./typescript/AppRate.d.ts",
+  "version": "1.4.0"
+}

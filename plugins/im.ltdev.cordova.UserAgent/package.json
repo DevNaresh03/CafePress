@@ -1,0 +1,59 @@
+{
+  "_from": "cordova-plugin-useragent",
+  "_id": "cordova-plugin-useragent@1.0.6",
+  "_inBundle": false,
+  "_integrity": "sha512-Oh5QaIonlI7UjUJ1dxXTRYRYBO1QWQNjhDXIR+J9b5BByg57nSFSjWffhY1DAHBnjewggkh2ZV88LBBp3zjPvg==",
+  "_location": "/cordova-plugin-useragent",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-useragent",
+    "name": "cordova-plugin-useragent",
+    "escapedName": "cordova-plugin-useragent",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-useragent/-/cordova-plugin-useragent-1.0.6.tgz",
+  "_shasum": "19cc4fa01f5c91b64f1ad4258547228603aec239",
+  "_spec": "cordova-plugin-useragent",
+  "_where": "/Users/sridhar.etikala/Documents/CafePress/tabs/Inappbrowser_tabs",
+  "author": {
+    "name": "Daniel Sogl"
+  },
+  "bugs": {
+    "url": "https://github.com/danielsogl/cordova-plugin-useragent/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "com.danielsogl.cordova.useragent",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "deprecated": false,
+  "description": "Allows you to change your User-Agent for HTTP requests.",
+  "homepage": "https://github.com/danielsogl/cordova-plugin-useragent#readme",
+  "keywords": [
+    "user",
+    "agent",
+    "useragent",
+    "user-agent",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "license": "MIT",
+  "name": "cordova-plugin-useragent",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsogl/cordova-plugin-useragent.git"
+  },
+  "version": "1.0.6"
+}

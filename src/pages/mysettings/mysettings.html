@@ -1,0 +1,76 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title color="title">Settings </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content scroll="true" padding="false" style="background:#fff;">
+
+
+  <!-- <ion-label class="settings_label">About Us</ion-label> -->
+
+  <!-- ABOUT LABEL -->
+  <!-- <ion-item class="ion_item_main_style">
+    <ion-label class="settings_item" (click)="openOutSideWebBrowser('/cp/info/about')">About CafePress</ion-label>
+  </ion-item> -->
+
+  <!-- TERMS AND CONDITIONS  -->
+  <!-- <ion-item class="ion_item_main_style">
+    <ion-label class="settings_item" (click)="openOutSideWebBrowser('/p/terms-conditions#privacystatement')"> Terms &
+      Conditions </ion-label>
+  </ion-item> -->
+
+  <!-- HELP CENTER  -->
+  <!-- <ion-item class="ion_item_main_style"> 
+    <ion-label class="settings_item" (click)="openOutSideWebBrowser('/p/help-buying')">Help Center </ion-label>
+  </ion-item> -->
+
+  <!-- RATE US ON THE APP  -->
+  <ion-item class="ion_item_main_style">
+    <ion-label class="settings_item" (click)="openOtherLinks()">Rate Us</ion-label>
+  </ion-item>
+
+
+
+
+  <!-- <ion-label class="settings_label">Legal</ion-label> -->
+
+  <!-- REPORT ALLEGNED LABEL -->
+  <!-- <ion-item class="ion_item_main_style">
+    <ion-label class="settings_item" (click)="openOutSideWebBrowser('/p/terms-conditions#infringement')">
+      Report Alleged Infringements</ion-label>
+  </ion-item> -->
+
+
+  <ion-item no-lines class="ion_item_bottom_style">
+
+    <!-- SEND EMAIL  -->
+    <!-- <div class="div_setting_call">
+          <span class="setting_call">Send us an</span>
+          <span class="setting_call_number" (click)="openOutSideWebBrowser('/p/help-contact-us')">Email</span>
+        </div> -->
+
+    <!-- CALL US AT (877) 809-1659-->
+    <div class="div_setting_call">
+      <span class="setting_call">Call us at</span>
+      <span class="setting_call_number" (click)="launchDialer('(877) 809-1659')">(877) 809-1659</span>
+    </div>
+
+    <!-- Outside the US call (877) 809-1659-->
+    <div class="div_setting_call">
+      <span class="setting_call">Outside the US call</span>
+      <span class="setting_call_number" (click)="launchDialer('(919) 323-4480')">(919) 323-4480</span>
+    </div>
+  </ion-item>
+
+  <ion-label class="version-label">Version-{{app_version}}</ion-label>
+
+</ion-content>

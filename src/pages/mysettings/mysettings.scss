@@ -1,0 +1,90 @@
+
+$font-family-base: "Open Sans" !default;
+page-mysettings {
+    .floatRight{
+        float: right;
+    }
+    .cardPadding {
+        padding: 2px;
+        margin: 10px 8px 5px 0px;
+        width: calc(100% - 0px);
+    }
+    .p-right{
+        padding-right: 19px;
+    }
+    .card-ios .item-ios.item-block .item-inner{
+        margin-left: -14px;
+    }
+    .list-ios[inset]{
+        margin: 14px;
+    }
+    .p-leftItem{
+        padding-left: 31px;
+    }
+      .ion_item_style {
+        margin: 50px 0px 0px 0px;
+      }
+
+    
+      .ion_item_bottom_style {
+        margin: 40px 0px 0px 0px;
+        margin-left: -6px;
+      }
+
+      .ion_item_main_style {
+        padding-left: -100px;
+        margin-left: -6px;
+      }
+
+      .div_setting_call {
+        height: 30px;
+      }
+      .setting_call {
+        font-family: "Open Sans" !important;
+        font-size: 16px;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #43464a;
+      }
+
+      .setting_call_number {
+        font-family: "Open Sans" !important;
+        font-size: 16px;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #77b800;
+      }
+
+      .version-label {
+        font-family: "Open Sans" !important;
+        font-style: normal;
+        text-align: center;
+      }
+
+      .settings_label{
+        font-family: "Open Sans" !important;
+        font-size: 15px;
+        font-style: bold;
+        font-stretch: normal;
+        line-height: 1.71;
+        letter-spacing: normal;
+        text-align: left;
+        color: #43464a;
+      }
+
+      .settings_item {
+        font-family: "Open Sans" !important;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.5;
+        letter-spacing: normal;
+        text-align: left;
+        color: #43464a;
+      }
+}
