@@ -57,7 +57,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
     "prettier": "^1.12.1",
-    "semantic-release": "^15.2.0",
+    "semantic-release": "^17.2.3",
     "travis-deploy-once": "^5.0.0"
   },
   "eslintConfig": {
